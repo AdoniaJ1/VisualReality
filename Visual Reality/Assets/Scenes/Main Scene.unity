@@ -528,6 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489883979}
   - component: {fileID: 489883980}
+  - component: {fileID: 489883981}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Untagged
@@ -729,6 +730,19 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &489883981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489883978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec64f72e57d00fa4291a30377a3ef3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubePrefab: {fileID: 2506238414984624251, guid: 80a3534a24b34f3428135a7e1dfb2713, type: 3}
 --- !u!1 &701051421
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +782,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701051421}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec64f72e57d00fa4291a30377a3ef3c6, type: 3}
   m_Name: 
