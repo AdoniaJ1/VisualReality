@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class ScaleObject : MonoBehaviour
+public class UpdateScaleObject : MonoBehaviour
 {
     public GameObject object2Scale;
     public GameObject leftHand;
@@ -20,8 +20,9 @@ public class ScaleObject : MonoBehaviour
     public InputActionProperty leftScale;
     public InputActionProperty rightScale;
 
-    
-    void Start(){
+    // Start is called before the first frame update
+    void Start()
+    {
         currPosL = leftHand.transform.localPosition;
         currPosR = rightHand.transform.localPosition;
     }
@@ -33,14 +34,17 @@ public class ScaleObject : MonoBehaviour
         currPosL = leftHand.transform.localPosition;
         lastPosR = currPosR;
         currPosR = rightHand.transform.localPosition;
-        Debug.Log("Right Controller Position: " + currPosR);
-        
-        if((leftGrab.action.ReadValue<float>()>0.1f && leftScale.action.ReadValue<float>()>0.1f)){
-            object2Scale.transform.localScale += (currPosL - lastPosL);
-        }
-        if((rightGrab.action.ReadValue<float>()>0.1f && rightScale.action.ReadValue<float>()>0.1f)){
-            object2Scale.transform.localScale += (currPosR - lastPosR);
-            Debug.Log("Intended Scale" + object2Scale.transform.localScale);
-        }
+
+        Debug.Log("Local Scale: "+ object2Scale.transform.localScale);
+        Debug.Log("+");
+        Debug.Log("Current Position R: "+ currPosR);
+        Debug.Log("-");
+        Debug.Log("Last Position R: "+ lastPosR);
+        Debug.Log("=");
+
+        object2Scale.transform.localScale += (currPosR - lastPosR);
+
+        Debug.Log("Local Scale: "+ object2Scale.transform.localScale);
+        Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 }
