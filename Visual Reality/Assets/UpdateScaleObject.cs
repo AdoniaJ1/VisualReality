@@ -35,16 +35,16 @@ public class UpdateScaleObject : MonoBehaviour
         lastPosR = currPosR;
         currPosR = rightHand.transform.localPosition;
 
-        Debug.Log("Local Scale: "+ object2Scale.transform.localScale);
+        Debug.Log("Local Scale: "+ transform.localScale);
         Debug.Log("+");
         Debug.Log("Current Position R: "+ currPosR);
         Debug.Log("-");
         Debug.Log("Last Position R: "+ lastPosR);
         Debug.Log("=");
 
-        object2Scale.transform.localScale += (currPosR - lastPosR);
+        transform.localScale += (currPosR - lastPosR);
 
-        Debug.Log("Local Scale: "+ object2Scale.transform.localScale);
+        Debug.Log("Local Scale: "+ transform.localScale);
         Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 }
