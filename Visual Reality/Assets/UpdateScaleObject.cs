@@ -21,14 +21,14 @@ public class UpdateScaleObject : MonoBehaviour
     public InputActionProperty rightScale;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         currPosL = leftHand.transform.localPosition;
         currPosR = rightHand.transform.localPosition;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         lastPosL = currPosL;
         currPosL = leftHand.transform.localPosition;
