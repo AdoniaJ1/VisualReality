@@ -720,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489883978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   leftSelect:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Left Select
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 861437d1-de10-46d6-92c7-6f9ffc700b9a
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   rightSelect:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Right Select
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: 23b76923-02a0-46c9-a27e-2b65cafb5169
@@ -2465,7 +2465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312532967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0.621}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0.621}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3301,7 +3301,7 @@ GameObject:
   - component: {fileID: 1486967888}
   - component: {fileID: 1486967887}
   m_Layer: 0
-  m_Name: Visuals
+  m_Name: Cube Physicals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4775,7 +4775,7 @@ GameObject:
   - component: {fileID: 2075938213}
   - component: {fileID: 2075938216}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Cube Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
