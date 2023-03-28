@@ -14,7 +14,6 @@ public class UpdateScaleObject : MonoBehaviour
     private Vector3 lastPos = new Vector3();
     private Vector3 currentPos = new Vector3();
     public bool grabL; 
-    //private Vector3 multi = new Vector3(1.5f,1.5f,1.5f);
     private Vector3 difference = new Vector3();
     
 
@@ -50,7 +49,7 @@ public class UpdateScaleObject : MonoBehaviour
             
             //public static Vector3 operator *(1.5f, Vector3 a);
             difference = (currentPos - lastPos);
-            transform.localScale += (difference*multi);
+            transform.localScale += (difference+difference);
 
             // Debug.Log("Local Scale: "+ transform.localScale);
             // Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -67,7 +66,7 @@ public class UpdateScaleObject : MonoBehaviour
             // Debug.Log("Last Position R: "+ lastPos);
             // Debug.Log("=");
             difference = (currentPos - lastPos);
-            transform.localScale += (difference * multi);
+            transform.localScale += (difference+difference);
 
             //Debug.Log("Local Scale: "+ transform.localScale);
             //Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
