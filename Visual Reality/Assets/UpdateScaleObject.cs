@@ -6,45 +6,61 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class UpdateScaleObject : MonoBehaviour
 {
-    public GameObject object2Scale;
-    public GameObject leftHand;
-    public GameObject rightHand;
-
-    private Vector3 lastPosL;
-    private Vector3 currPosL;
-    private Vector3 lastPosR;
-    private Vector3 currPosR;
-
-    public InputActionProperty leftGrab;
-    public InputActionProperty rightGrab;
-    public InputActionProperty leftScale;
-    public InputActionProperty rightScale;
+    public GameObject targetL;
+    public GameObject targetR;
+    public InputActionProperty leftSelect;
+    public InputActionProperty rightSelect;
+    private Vector3 lastPos;
+    private Vector3 currentPos;
+    public bool grabL; 
+    
 
     // Start is called before the first frame update
     void OnEnable()
     {
-        currPosL = leftHand.transform.localPosition;
-        currPosR = rightHand.transform.localPosition;
+
+        if(leftSelect.action.ReadValue<float>() > .1f){
+            Vector3 lastPos = targetL.transform.localPosition;
+            grabL = true;
+        } else {
+             Vector3 lastPos = targetR.transform.localPosition;
+             grabL = false;
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        lastPosL = currPosL;
-        currPosL = leftHand.transform.localPosition;
-        lastPosR = currPosR;
-        currPosR = rightHand.transform.localPosition;
+        if(grabL){
+            currentPos = targetL.transform.localPosition;
 
-        Debug.Log("Local Scale: "+ transform.localScale);
-        Debug.Log("+");
-        Debug.Log("Current Position R: "+ currPosR);
-        Debug.Log("-");
-        Debug.Log("Last Position R: "+ lastPosR);
-        Debug.Log("=");
+            Debug.Log("Local Scale: "+ transform.localScale);
+            Debug.Log("+");
+            Debug.Log("Current Position R: "+ currentPos);
+            Debug.Log("-");
+            Debug.Log("Last Position R: "+ lastPos);
+            Debug.Log("=");
 
-        transform.localScale += (currPosR - lastPosR);
+            transform.localScale += (currentPos - lastPos);
 
-        Debug.Log("Local Scale: "+ transform.localScale);
-        Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            Debug.Log("Local Scale: "+ transform.localScale);
+            Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            lastPos = currentPos;
+        } else {
+            currentPos = targetR.transform.localPosition;
+
+            Debug.Log("Local Scale: "+ transform.localScale);
+            Debug.Log("+");
+            Debug.Log("Current Position R: "+ currentPos);
+            Debug.Log("-");
+            Debug.Log("Last Position R: "+ lastPos);
+            Debug.Log("=");
+
+            transform.localScale += (currentPos - lastPos);
+
+            Debug.Log("Local Scale: "+ transform.localScale);
+            Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            lastPos = currentPos;
+        }
     }
 }
