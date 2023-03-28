@@ -594,23 +594,7 @@ MonoBehaviour:
       m_Id: 26d2aaa4-6518-4d33-8fae-419043a723d4
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 41ec74f4-e15c-4d99-9516-ec6c98aa8b0e
-        m_Path: <XRHMD>/centerEyeRotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Main Camera - TPD - Rotation
-        m_Flags: 0
-      - m_Name: 
-        m_Id: 18f8adca-5990-494f-9b5d-8afdde534469
-        m_Path: <HandheldARInputDevice>/deviceRotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Main Camera - TPD - Rotation
-        m_Flags: 0
+      m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -2024308242397127297, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_RotationAction:
