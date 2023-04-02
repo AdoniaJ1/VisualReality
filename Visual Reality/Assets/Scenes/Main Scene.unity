@@ -2468,6 +2468,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec64f72e57d00fa4291a30377a3ef3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightSpecial:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Special
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4717b068-15b7-4623-b917-246c091d4d08
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8627503815542794563, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  leftSpecial:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Special
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 48ca370d-cd28-43e4-bb95-f02013a179eb
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6493926169551849630, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   cubePrefab: {fileID: 775269600}
 --- !u!1 &371334561
 GameObject:
