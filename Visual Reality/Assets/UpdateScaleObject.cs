@@ -28,8 +28,8 @@ public class UpdateScaleObject : MonoBehaviour
              lastPos = targetR.transform.position;
              grabL = false;
         }
-        Debug.Log("Right Controller Position: "+  targetR.transform.position);
-        Debug.Log("Initial Position: "+ lastPos);
+        // Debug.Log("Right Controller Position: "+  targetR.transform.position);
+        // Debug.Log("Initial Position: "+ lastPos);
     }
 
     // Update is called once per frame
@@ -37,8 +37,8 @@ public class UpdateScaleObject : MonoBehaviour
     {
         if(grabL){
             currentPos = targetL.transform.position;
-            Debug.Log("Current Position "+ currentPos);
-            Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            // Debug.Log("Current Position "+ currentPos);
+            // Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             // Debug.Log("Local Scale: "+ transform.localScale);
             // Debug.Log("+");
@@ -56,8 +56,8 @@ public class UpdateScaleObject : MonoBehaviour
             lastPos = currentPos;
         } else {
             currentPos = targetR.transform.position;
-            Debug.Log("Current Position "+ currentPos);
-            Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            // Debug.Log("Current Position "+ currentPos);
+            // Debug.Log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             // Debug.Log("Local Scale: "+ transform.localScale);
             // Debug.Log("+");
