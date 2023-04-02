@@ -9,11 +9,10 @@ public class SpawnerScript : MonoBehaviour
 
     public InputActionProperty rightSpecial;
 
-
     public GameObject cubePrefab;
     void Update()
     {
-        if(rightSpecial.action.ReadValue<float>() > .1f)
+        if(rightSpecial.action.triggered)
         {
             Instantiate(cubePrefab, transform.position, Quaternion.identity);
         }
