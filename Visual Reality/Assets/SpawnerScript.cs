@@ -14,6 +14,8 @@ public class SpawnerScript : MonoBehaviour
     public GameObject shapePrefab;
     public GameObject cubePrefab;
     public GameObject spherePrefab;
+    public GameObject capsulePrefab;
+    public GameObject cylinderPrefab;
 
     void Update()
     {
@@ -21,6 +23,8 @@ public class SpawnerScript : MonoBehaviour
         {
             if(shapeDropDown.value == 0) shapePrefab = cubePrefab;
             if(shapeDropDown.value == 1) shapePrefab = spherePrefab;
+            if (shapeDropDown.value == 2) shapePrefab = capsulePrefab;
+            if (shapeDropDown.value == 3) shapePrefab = cylinderPrefab;
 
             Instantiate(shapePrefab, transform.position, Quaternion.identity);
         }
