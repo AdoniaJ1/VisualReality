@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571336, b: 0.3069219, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5395,6 +5395,30 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   handAnimator: {fileID: 1049871457}
+--- !u!114 &1049871459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049871456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86552dae2020e9f44806c593c010fb29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSpecial:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &1182246170
 GameObject:
   m_ObjectHideFlags: 0
@@ -6522,7 +6546,9 @@ GameObject:
   - component: {fileID: 1999318027}
   - component: {fileID: 1999318030}
   - component: {fileID: 1999318029}
+  - component: {fileID: 1999318032}
   - component: {fileID: 1999318028}
+  - component: {fileID: 1999318031}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Untagged
@@ -6821,6 +6847,42 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   m_ButtonPressPoint: 0.5
+--- !u!114 &1999318031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999318026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86552dae2020e9f44806c593c010fb29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSpecial:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Special
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 98920984-2736-4cfe-baa9-70487f68470b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6493926169551849630, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &1999318032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999318026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5954edb72e2d2484da706ab8b0100c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2034158647
 GameObject:
   m_ObjectHideFlags: 0
