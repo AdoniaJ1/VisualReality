@@ -9,12 +9,9 @@ public class ResetScene : MonoBehaviour
 {
     public InputActionProperty leftSpecial;
 
-    void Update()
+    public void Reset()
     {
-        if(leftSpecial.action.triggered)
-        {
            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 }
 
