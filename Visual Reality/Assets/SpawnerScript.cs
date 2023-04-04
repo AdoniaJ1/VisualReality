@@ -29,4 +29,8 @@ public class SpawnerScript : MonoBehaviour
             Instantiate(shapePrefab, transform.position, Quaternion.identity);
         }
     }
+    public void setCustomSpawn(GameObject selectedObject)
+    {
+        shapePrefab = selectedObject;
+    }
 }
