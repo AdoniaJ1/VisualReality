@@ -17,15 +17,19 @@ public class SpawnerScript : MonoBehaviour
     public GameObject capsulePrefab;
     public GameObject cylinderPrefab;
 
-    void Update()
+    public void SetPrefabFromDropdown()
     {
-        if(rightSpecial.action.triggered)
-        {
-            if(shapeDropDown.value == 0) shapePrefab = cubePrefab;
-            if(shapeDropDown.value == 1) shapePrefab = spherePrefab;
-            if (shapeDropDown.value == 2) shapePrefab = capsulePrefab;
-            if (shapeDropDown.value == 3) shapePrefab = cylinderPrefab;
+        
+        if (shapeDropDown.value == 0) shapePrefab = cubePrefab;
+        if (shapeDropDown.value == 1) shapePrefab = spherePrefab;
+        if (shapeDropDown.value == 2) shapePrefab = capsulePrefab;
+        if (shapeDropDown.value == 3) shapePrefab = cylinderPrefab;
 
+            //Instantiate(shapePrefab, transform.position, Quaternion.identity)       
+    }
+
+    void Update(){
+        if(rightSpecial.action.triggered){
             Instantiate(shapePrefab, transform.position, Quaternion.identity);
         }
     }
