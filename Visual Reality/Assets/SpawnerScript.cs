@@ -17,6 +17,9 @@ public class SpawnerScript : MonoBehaviour
     public GameObject capsulePrefab;
     public GameObject cylinderPrefab;
 
+    void Start(){
+        shapePrefab = cubePrefab;
+    }
     public void SetPrefabFromDropdown()
     {
         
