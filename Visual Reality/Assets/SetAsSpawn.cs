@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SetAsSpawn : MonoBehaviour
 {
-    public SpawnerScript spawner;
-    void Start(){
-        spawner = GetComponent<SpawnerScript>();
-        Debug.Log("~~~SPAWNOBJECT~~~");
-        Debug.Log(spawner.shapePrefab.name);
+    public GameObject currentObj;
+    public SpawnerScript spawnScript;
+
+    public void Set(){
+        spawnScript.shapePrefab = currentObj;
     }
 }

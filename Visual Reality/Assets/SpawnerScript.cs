@@ -18,6 +18,7 @@ public class SpawnerScript : MonoBehaviour
     public GameObject cylinderPrefab;
 
     void Start(){
+        Debug.Log("SettingCube");
         shapePrefab = cubePrefab;
     }
     public void SetPrefabFromDropdown()
