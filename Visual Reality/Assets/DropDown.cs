@@ -19,7 +19,7 @@ public class DropDown : MonoBehaviour
    public void getDropdown()
     {
         if (sceneDrop.value ==0) {LoadScene("Main Scene");}
-          if (sceneDrop.value ==1) {LoadScene("Test Scene NRB");}
+          if (sceneDrop.value ==1) {LoadScene("Table Scene");}
     }
 
     public void quit() {

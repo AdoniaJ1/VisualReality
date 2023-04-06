@@ -3032,7 +3032,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: Main Scene
       m_Image: {fileID: 0}
-    - m_Text: Option B
+    - m_Text: Table Scene
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
